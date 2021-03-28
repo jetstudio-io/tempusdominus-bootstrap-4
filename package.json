@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "main": "build/js/tempusdominus-bootstrap-4.js",
-  "name": "tempusdominus-bootstrap-4",
+  "name": "jetstudio-tempusdominus-bootstrap-4",
   "author": "Jonathan Peterson",
   "contributors": [
     "Anton Bagdatyev (Tonix)"
@@ -38,7 +38,7 @@
     "uglify-docs": "uglifyjs --compress warnings=false --mangle --comments '/^!/' --output docs/assets/js/docs.min.js docs/assets/js/vendor/*.js docs/assets/js/src/application.js",
     "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
     "test": "npm run eslint && grunt test",
-    "watch": "./node_modules/.bin/onchange './src/js/**' './src/sass/**' -- npm run build",
+    "watch": "onchange './src/js/**' './src/sass/**' -- npm run build",
     "build": "grunt build:travis",
     "build-all": "npm run build",
     "git-add-cm": "git add . && git commit -am",
@@ -80,7 +80,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tempusdominus/bootstrap-4.git"
+    "url": "git+https://github.com/tempusdominus/bootstrap-4.git"
   },
   "version": "5.39.0",
   "files": [
@@ -91,5 +91,8 @@
   ],
   "browserslist": [
     "> .05%"
-  ]
+  ],
+  "directories": {
+    "doc": "docs"
+  }
 }
